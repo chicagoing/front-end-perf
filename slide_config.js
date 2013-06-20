@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Title Goes Here<br>Up To Two Lines',
-    subtitle: 'Subtitle Goes Here',
+    title: 'Front-End Performance',
+    subtitle: 'Best practices and tools',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
@@ -23,7 +23,7 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: 'Estella Madison',
-    company: 'Front-End Developer<br>Blurb',
+    company: '',
     gplus: '',
     twitter: '@chicagoing',
     www: 'http://www.estellagonzalez.com',
