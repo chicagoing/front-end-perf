@@ -41,12 +41,13 @@
     </hgroup>
     <article>
       <ul>
-        <li>CSS Selectors
+        <li>CSS
           <ul>
             <li>Efficiency of selectors</li>
             <li>Overqualifying selectors</li>
             <li>The <em>key</em> selector</li>
             <li>Performance is about balance</li>
+            <li>Hardware acceleration</li>
           </ul>
         </li>
 
@@ -65,7 +66,7 @@
 
   <slide>
     <hgroup>
-      <h2>CSS Selectors</h2>
+      <h2>CSS</h2>
       <h3>Efficiency of selectors</h3>
     </hgroup>
     <article class="smaller">
@@ -88,7 +89,7 @@
 
   <slide>
     <hgroup>
-      <h2>CSS Selectors</h2>
+      <h2>CSS</h2>
       <h3>Overqualifying selectors</h3>
     </hgroup>
     <article class="smaller">
@@ -114,7 +115,7 @@
 
   <slide>
     <hgroup>
-      <h2>CSS Selectors</h2>
+      <h2>CSS</h2>
       <h3>Overqualifying selectors</h3>
     </hgroup>
     <article class="smaller">
@@ -132,7 +133,7 @@
 
   <slide>
     <hgroup>
-      <h2>CSS Selectors</h2>
+      <h2>CSS</h2>
       <h3>The <em>key</em> selector</h3>
     </hgroup>
     <article class="smaller">
@@ -162,7 +163,7 @@
 
   <slide>
     <hgroup>
-      <h2>CSS Selectors</h2>
+      <h2>CSS</h2>
       <h3>Performance is about balance</h3>
     </hgroup>
     <article>
@@ -172,6 +173,25 @@
         when we use leaner markup.
       </p>
     </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>CSS</h2>
+      <h3>Hardware acceleration</h3>
+    </hgroup>
+    <article>
+      <p>Offload tasks that would otherwise be calculated by the main CPU to the GPU.</p>
+      <pre class="prettyprint" data-lang="css">
+        /* Force hardware acceleration */
+        transform: translate3d(0, 0, 0);</pre>
+      <p>Most CSS is computed on the CPU, but the <code>translate</code> version gets elevated to the GPU.
+    </article>
+    <footer class="source">
+      <ul>
+        <li>Paul Irish, paulirish.com, "<a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">Why Moving Elements With Translate() Is Better Than Pos:abs Top/left</a>"</li>
+        <li>David Walsh, davidwalsh.name, "<a href="http://davidwalsh.name/translate3d">Force Hardware Acceleration in WebKit with translate3d</a>"
+    </footer>
   </slide>
 
   <slide>
@@ -373,17 +393,16 @@ console.timeEnd('jQuery');</pre>
       <h3>A lot jQuery UI widgets can be implemented with far less code</h3>
     </hgroup>
     <article class="smaller">
-      <h4>jQuery UI is great for new HTML5 input types aren't widely supported yet</h4>
-      <ul>
-        <li><strong>Datepicker</strong>: the <code>input[type="date"]</code> only works in Chrome, Opera, iOS Safari, and Blackberry Browser.</li>
-        <li><strong>Slider</strong>: the <code>input[type="range"]</code> is supported in all modern browsers except for Opera Mini, but is not supported in IE8 or IE9.</li>
-      </ul>
-      <h4>... but definitely avoid</h4>
       <ul>
         <li><strong>Accordion</strong>: the HTML5 <code>summary</code> and <code>details</code> elements can be used to give an accordion effect. They're not supported in IE or Firefox, but it's pretty easy to add the effect for these browsers using CSS and JavaScript.</li>
         <li><strong>Progressbar</strong>: there's an <code>input[type="progress"]</code> element that has pretty good support, but building a simple progress bar is simple enough.</li>
         <li><strong>Tabs</strong></li>
         <li><strong>Tooltip</strong></li>
+      </ul>
+      <h4>... but still use it for new HTML5 input types aren't widely supported yet</h4>
+      <ul>
+        <li><strong>Datepicker</strong>: the <code>input[type="date"]</code> only works in Chrome, Opera, iOS Safari, and Blackberry Browser.</li>
+        <li><strong>Slider</strong>: the <code>input[type="range"]</code> is supported in all modern browsers except for Opera Mini, IE8 and IE9.</li>
       </ul>
     </article>
     <footer class="source"><a href="http://caniuse.com">caniuse.com</a></footer>
